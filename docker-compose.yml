@@ -1,0 +1,35 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:80"
+    volumes:
+      - .:/var/www/html
+    depends_on:
+      - db
+    environment:
+      - DatabaseType=postgresql
+      - DatabaseServer=db
+      - DatabasePort=5432
+      - DatabaseName=rosariosis
+      - DatabaseUsername=rosariosis
+      - DatabasePassword=rosariosis_password
+
+  db:
+    image: postgres:13
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_DB=rosariosis
+      - POSTGRES_USER=rosariosis
+      - POSTGRES_PASSWORD=rosariosis_password
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./rosariosis.sql:/docker-entrypoint-initdb.d/rosariosis.sql
+
+volumes:
+  postgres_data:

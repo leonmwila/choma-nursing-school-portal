@@ -1,0 +1,286 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Library module for RosarioSIS\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-01-07 15:46+0100\n"
+"PO-Revision-Date: 2025-01-07 15:47+0100\n"
+"Last-Translator: François Jacquet <info@rosariosis.org>\n"
+"Language-Team: RosarioSIS <info@rosariosis.org>\n"
+"Language: fr_FR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Poedit-KeywordsList: ;dgettext:2;dngettext:2\n"
+"X-Poedit-Basepath: ../../..\n"
+"X-Generator: Poedit 3.2.2\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: Library.php:185 Loans.php:189 includes/Library.fnc.php:381
+msgid "Document"
+msgstr "Document"
+
+#: Library.php:204 includes/Library.fnc.php:367
+msgid "Document Category"
+msgstr "Catégorie de document"
+
+#: Library.php:248
+msgid "The document was lent."
+msgstr "Le document est prêté."
+
+#: Library.php:290 includes/Library.fnc.php:499
+msgid "Lend"
+msgstr "Prêter"
+
+#: Library.php:310
+#, php-format
+msgid "Lend \"%s\" to %s"
+msgstr "Prêter \"%s\" à \"%s\""
+
+#: Library.php:395
+msgid "New Document"
+msgstr "Nouveau document"
+
+#: Library.php:403
+msgid "New Document Category"
+msgstr "Nouvelle catégorie de document"
+
+#: Loans.php:89
+msgid "Document was returned."
+msgstr "Le document a été retourné."
+
+#: Loans.php:184
+msgid "Return Date"
+msgstr "Date de retour"
+
+#: Loans.php:196
+msgid "Loan"
+msgstr "Prêt"
+
+#: Loans.php:197 Menu.php:24 Menu.php:44 Menu.php:51
+#: includes/Library.fnc.php:472
+msgid "Loans"
+msgstr "Prêts"
+
+#: Loans.php:269 includes/Library.fnc.php:490 includes/LoansWidgets.fnc.php:154
+msgid "Past Due"
+msgstr "En retard"
+
+#: Loans.php:278
+msgid "Return document"
+msgstr "Retourner le document"
+
+#: Menu.php:15 Menu.php:21 Menu.php:23 Menu.php:41 Menu.php:43 Menu.php:48
+#: Menu.php:50
+msgid "Library"
+msgstr "Bibliothèque"
+
+#: Menu.php:31
+msgid "Premium"
+msgstr ""
+
+#: Menu.php:33
+msgid "Document Fields"
+msgstr "Champs document"
+
+#: Menu.php:37
+msgid "Loans Breakdown"
+msgstr "Répartition des prêts"
+
+#: includes/Library.fnc.php:135 includes/Library.fnc.php:143
+#: includes/Library.fnc.php:337
+msgid "Reference"
+msgstr "Référence"
+
+#: includes/Library.fnc.php:185
+msgid "Author"
+msgstr "Auteur"
+
+#: includes/Library.fnc.php:368
+msgid "Document Categories"
+msgstr "Catégories de document"
+
+#: includes/Library.fnc.php:382 includes/LoansWidgets.fnc.php:85
+msgid "Documents"
+msgstr "Documents"
+
+#: includes/Library.fnc.php:485
+msgid "Lent"
+msgstr "Prêté"
+
+#: includes/Library.fnc.php:507
+msgid "Available"
+msgstr "Disponible"
+
+#: includes/LoansWidgets.fnc.php:72 includes/LoansWidgets.fnc.php:78
+msgid "Borrowed documents"
+msgstr "Documents empruntés"
+
+#: includes/LoansWidgets.fnc.php:141 includes/LoansWidgets.fnc.php:147
+msgid "Has late documents"
+msgstr "A des documents en retard"
+
+#: includes/UpsellPremium.inc.php:35
+#, php-format
+msgid "This program is available in the %s module."
+msgstr "Ce programme est disponible dans le module %s."
+
+#: includes/UpsellPremium.inc.php:37
+msgid "Library Premium"
+msgstr "Bibliothèque Premium"
+
+#~ msgid "Quiz"
+#~ msgid_plural "Quizzes"
+#~ msgstr[0] "Quiz"
+#~ msgstr[1] "Quiz"
+
+#~ msgid "Quizzes"
+#~ msgstr "Quiz"
+
+#~ msgid "Questions"
+#~ msgstr "Questions"
+
+#~ msgid "Question"
+#~ msgstr "Question"
+
+#~ msgid "Question Category"
+#~ msgstr "Catégorie de Questions"
+
+#~ msgid "New Question"
+#~ msgstr "Nouvelle Question"
+
+#~ msgid "New Question Category"
+#~ msgstr "Nouvelle Catégorie de Questions"
+
+#~ msgid "Back to Quizzes"
+#~ msgstr "Retour aux Quiz"
+
+#~ msgid "New Quiz"
+#~ msgstr "Nouveau Quiz"
+
+#~ msgid "Quiz submitted."
+#~ msgstr "Quiz répondu."
+
+#~ msgid "You alreay have graded this Quiz."
+#~ msgstr "Vous avez déjà noté ce Quiz."
+
+#~ msgid "Grade Quiz"
+#~ msgstr "Noter le Quiz"
+
+#~ msgid "Add Question"
+#~ msgstr "Ajouter la Question"
+
+#~ msgid "Question Categories"
+#~ msgstr "Catégories de Questions"
+
+#~ msgid "Select One from Options"
+#~ msgstr "Options à Choix Simple"
+
+#~ msgid "Gap Fill"
+#~ msgstr "Texte à Trous"
+
+#~ msgid "Mark correct answer with an asterisk *."
+#~ msgstr "Marquer les réponse correctes d'une astérisque *."
+
+#~ msgid ""
+#~ "*True\n"
+#~ "False"
+#~ msgstr ""
+#~ "*Vrai\n"
+#~ "Faux"
+
+#~ msgid ""
+#~ "*Correct option #1\n"
+#~ "Wrong option #2\n"
+#~ "Wrong option #3\n"
+#~ "*Correct option #4"
+#~ msgstr ""
+#~ "*Choix correct #1\n"
+#~ "Choix incorrect #2\n"
+#~ "Choix incorrect #3\n"
+#~ "*Choix correct #4"
+
+#~ msgid "Text with gaps"
+#~ msgstr "Texte à trous"
+
+#~ msgid "Delimit gaps with double underscores __"
+#~ msgstr "Délimiter les trous par deux tirets bas __"
+
+#~ msgid ""
+#~ "The sky is __blue__.\n"
+#~ "The grass is __green__."
+#~ msgstr ""
+#~ "Le ciel est __bleu__.\n"
+#~ "L'herbe est __verte__."
+
+#~ msgid "Answer"
+#~ msgstr "Réponse"
+
+#~ msgid "No Assignments are available. Please add a new Assignment: %s"
+#~ msgstr "Aucun Devoir disponible. Merci d'ajouter un nouveau Devoir: %s"
+
+#~ msgid "Show Correct Answers"
+#~ msgstr "Afficher les Réponses Correctes"
+
+#~ msgid "Random Question Order"
+#~ msgstr "Ordre des Questions Aléatoire"
+
+#~ msgid "You are not allowed to access this quiz."
+#~ msgstr "Vous n'êtes pas autorisé a accéder à ce quiz."
+
+#~ msgid "Submissions for this quiz are closed."
+#~ msgstr "Il n'est plus possible de répondre à ce quiz."
+
+#~ msgid "Submit Quiz"
+#~ msgstr "Soumettre le Quiz"
+
+#~ msgid "Answered"
+#~ msgstr "Répondu"
+
+#~ msgid "Answers"
+#~ msgstr "Réponses"
+
+#~ msgid "Add New Quiz"
+#~ msgstr "Ajouter un Nouveau Quiz"
+
+#~ msgid "Quizzes already contain this question."
+#~ msgstr "Les quiz contiennent déjà cette question."
+
+#~ msgid "Answer (optional)."
+#~ msgstr "Réponse (optionnel)."
+
+#~ msgid "# of Students"
+#~ msgstr "# d'Élèves"
+
+#~ msgid "# of Administrators"
+#~ msgstr "# d'Administrateurs"
+
+#~ msgid "# of Teachers"
+#~ msgstr "# de Professeurs"
+
+#~ msgid "# of Parents"
+#~ msgstr "# de Parents"
+
+#~ msgid "Create Subject PDF for Selected Students"
+#~ msgstr "Créer le PDF Matière pour les Élèves Sélectionnés"
+
+#~ msgid "Quiz Widget"
+#~ msgstr "Widget Exemple"
+
+#~ msgid "Setup"
+#~ msgstr "Paramétrage"
+
+#~ msgid "Quiz Resource"
+#~ msgstr "Ressource Exemple"
+
+#~ msgid "The configuration value has been modified."
+#~ msgstr "La valeur de configuration a été modifiée."
+
+#~ msgid "Quiz module Setup"
+#~ msgstr "Paramétrage du Module Exemple"
+
+#~ msgid "Try to enter a non-numeric value"
+#~ msgstr "Essayez d'entrer une valuer non-numérique"
+
+#~ msgid "Quiz config value label"
+#~ msgstr "Exemple de nom de valeur de config"

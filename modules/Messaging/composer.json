@@ -1,0 +1,26 @@
+{
+	"name": "francoisjacquet/messaging",
+	"description": "Internal Messaging module for RosarioSIS.",
+	"keywords": ["message", "communication", "internal"],
+	"homepage": "https://www.rosariosis.org/modules/messaging/",
+	"license": "GPL-2.0-or-later",
+	"authors": [{
+		"name": "François Jacquet"
+	}],
+	"type": "rosariosis-module",
+	"version": "11.3",
+	"time": "2025-04-16",
+	"require": {
+		"php": ">=5.5.9"
+	},
+	"extra": {
+		"require": {
+			"francoisjacquet/rosariosis": ">=4.5"
+		},
+		"self_url": "https://gitlab.com/francoisjacquet/Messaging/raw/master/composer.json"
+	},
+	"_comment": [
+		"https://getcomposer.org/doc/04-schema.md",
+		"https://wp-kama.com/note/package-versions-in-composer-json"
+	]
+}

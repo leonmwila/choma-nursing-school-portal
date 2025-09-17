@@ -1,0 +1,259 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Messaging module for RosarioSIS\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-04-22 18:22+0200\n"
+"PO-Revision-Date: 2024-04-22 18:22+0200\n"
+"Last-Translator: François Jacquet <info@rosariosis.org>\n"
+"Language-Team: RosarioSIS <info@rosariosis.org>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Poedit-KeywordsList: ;dgettext:2\n"
+"X-Poedit-Basepath: ../../..\n"
+"X-Generator: Poedit 3.2.2\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: Menu.php:12 Menu.php:19
+msgid "Messaging"
+msgstr "Sporočanje"
+
+#: Menu.php:14 Menu.php:21
+msgid "Messages"
+msgstr "Sporočila"
+
+#: Menu.php:15 Menu.php:22
+msgid "Write"
+msgstr "Pišite"
+
+#: Messages.php:31
+msgid "Message archived."
+msgstr "Sporočilo arhivirano."
+
+#: Write.php:49
+msgid "Message sent."
+msgstr "Sporočilo poslano."
+
+#: Write.php:53
+msgid "The message could not be sent."
+msgstr "Sporočila ni bilo mogoče poslati."
+
+#: Write.php:98
+msgid "You are not allowed to send messages."
+msgstr "Nimate dovoljenja za pošiljanje sporočil."
+
+#: Write.php:135
+msgid "Find a Parent"
+msgstr "Najdi starša"
+
+#: Write.php:183 includes/Messages.fnc.php:204
+msgid "To"
+msgstr "Do"
+
+#: Write.php:187 Write.php:317
+msgid "Send"
+msgstr "Pošlji"
+
+#: Write.php:193 includes/Messages.fnc.php:67 includes/Messages.fnc.php:73
+#: includes/Messages.fnc.php:80 includes/Messages.fnc.php:247
+msgid "Subject"
+msgstr "Predmet"
+
+#: includes/Messages.fnc.php:68
+msgid "Recipients"
+msgstr "Prejemniki"
+
+#: includes/Messages.fnc.php:74 includes/Messages.fnc.php:81
+#: includes/Messages.fnc.php:164
+msgid "From"
+msgstr "Od"
+
+#: includes/Messages.fnc.php:79 includes/Messages.fnc.php:131
+#: includes/Messages.fnc.php:327
+msgid "Archive"
+msgstr "Arhiviraj"
+
+#: includes/Messages.fnc.php:87
+msgid "Unread"
+msgstr "Neprebrano"
+
+#: includes/Messages.fnc.php:88
+msgid "Unread message"
+msgstr "Neprebrano sporočilo"
+
+#: includes/Messages.fnc.php:89
+msgid "Unread messages"
+msgstr "Neprebrana sporočila"
+
+#: includes/Messages.fnc.php:94
+msgid "Read"
+msgstr "Preberi"
+
+#: includes/Messages.fnc.php:95
+msgid "Read message"
+msgstr "Preberi sporočilo"
+
+#: includes/Messages.fnc.php:96
+msgid "Read messages"
+msgstr "Preberi sporočila"
+
+#: includes/Messages.fnc.php:101
+msgid "Archived"
+msgstr "Arhivirano"
+
+#: includes/Messages.fnc.php:102
+msgid "Archived message"
+msgstr "Sporočilo arhivirano"
+
+#: includes/Messages.fnc.php:103
+msgid "Archived messages"
+msgstr "Sporočila arhivirana"
+
+#: includes/Messages.fnc.php:108
+msgid "Sent"
+msgstr "Pošlji"
+
+#: includes/Messages.fnc.php:109
+msgid "Sent message"
+msgstr "Pošlji sporočilo"
+
+#: includes/Messages.fnc.php:110
+msgid "Sent messages"
+msgstr "Pošlji sporočila"
+
+#: includes/Messages.fnc.php:335
+msgid "Reply"
+msgstr "Odgovori"
+
+#: includes/Messages.fnc.php:343
+#, php-format
+msgid "Back to %s"
+msgstr "Nazaj na %s"
+
+#: includes/Messages.fnc.php:445
+#, php-format
+msgid "%s Read"
+msgstr "%s Preberi"
+
+#: includes/Write.fnc.php:32
+msgid "The message could not be sent. Form elements are missing."
+msgstr "Sporočila ni bilo mogoče poslati. Manjkajo elementi obrazca."
+
+#: includes/Write.fnc.php:58
+msgid "You are not allowed to send a message to those recipients."
+msgstr "Tem prejemnikom ne smete poslati sporočila."
+
+#: includes/Write.fnc.php:614 includes/Write.fnc.php:616
+#, php-format
+msgid "Re: %s"
+msgstr "Odgovori: %s"
+
+#~ msgid "Display Name"
+#~ msgstr "Prikazno ime"
+
+#~ msgid "Last Name"
+#~ msgstr "Priimek"
+
+#~ msgid "First Name"
+#~ msgstr "Ime"
+
+#~ msgid "School"
+#~ msgstr "Dijaški dom"
+
+#~ msgid "Grade Level"
+#~ msgstr "Letnik"
+
+#~ msgid "Message"
+#~ msgstr "Sporočilo"
+
+#~ msgid "File Attached"
+#~ msgstr "Priponka"
+
+#~ msgid "Teachers"
+#~ msgstr "Vzgojitelji"
+
+#~ msgid "Administrators"
+#~ msgstr "Administratorji"
+
+#~ msgid "Hold the CTRL key down to select multiple options"
+#~ msgstr "Držite tipko CTRL, da izberete več možnosti"
+
+#, php-format
+#~ msgid "%d new message"
+#~ msgid_plural "%d new messages"
+#~ msgstr[0] "%d novo sporočilo"
+#~ msgstr[1] "%d nova sporočila"
+
+#~ msgid "Date"
+#~ msgstr "Datum"
+
+#~ msgid "Send again"
+#~ msgstr "Pošlji ponovno"
+
+#~ msgid "Copy"
+#~ msgstr "Kopiraj"
+
+#~ msgid "Copy the substitution code and paste it into your text. The code will be dynamically replaced with the corresponding value."
+#~ msgstr "Kopirajte nadomestno kodo in jo prilepite v besedilo. Koda bo dinamično nadomeščena z ustrezno vrednostjo."
+
+#~ msgid "Substitutions"
+#~ msgstr "Zamenjave"
+
+#~ msgid "Yes"
+#~ msgstr "Da"
+
+#~ msgid "No"
+#~ msgstr "Ne"
+
+#~ msgid "Please fill in the required fields"
+#~ msgstr "Prosimo izpolnite zahtevana polja"
+
+#~ msgid "Students"
+#~ msgstr "Dijaki"
+
+#~ msgid "Staff"
+#~ msgstr "Zaposleni"
+
+#~ msgid "Users"
+#~ msgstr "Uporabniki"
+
+#~ msgid "Parents"
+#~ msgstr "Starši"
+
+#~ msgid "# of Students"
+#~ msgstr "# de Estudiantes"
+
+#~ msgid "# of Administrators"
+#~ msgstr "# de Administradores"
+
+#~ msgid "# of Teachers"
+#~ msgstr "# de Docentes"
+
+#~ msgid "# of Parents"
+#~ msgstr "# de Padres"
+
+#~ msgid "Create Subject PDF for Selected Students"
+#~ msgstr "Crear el PDF Materia para los Estudiantes Seleccionados"
+
+#~ msgid "Messaging Widget"
+#~ msgstr "Widget de Ejemplo"
+
+#~ msgid "Setup"
+#~ msgstr "Configuración"
+
+#~ msgid "Messaging Resource"
+#~ msgstr "Recurso de Ejemplo"
+
+#~ msgid "The configuration value has been modified."
+#~ msgstr "El valor de configuración ha sido modificado."
+
+#~ msgid "Messaging module Setup"
+#~ msgstr "Configuración del Módulo Ejemplo"
+
+#~ msgid "Try to enter a non-numeric value"
+#~ msgstr "Intente entrar un valor no numerico"
+
+#~ msgid "Messaging config value label"
+#~ msgstr "Ejemplo de nombre del valor de config"

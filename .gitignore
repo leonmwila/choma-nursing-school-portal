@@ -1,0 +1,29 @@
+# IDE and Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Dependencies and vendor
+/vendor/
+node_modules/
+
+# Environment files
+.env
+.env.*
+config.local.php
+
+# Cache and temporary files
+*.log
+*.cache
+.DS_Store
+Thumbs.db
+
+# Build output
+/dist/
+/build/
+
+# Backup files
+*.bak
+*.backup
+*~
