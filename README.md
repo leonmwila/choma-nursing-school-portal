@@ -1,7 +1,7 @@
 Choma Nursing School Portal
 ===========================
 
-This is a customized student information system for Choma Nursing School, based on RosarioSIS.
+This is a customized student information system for Choma Nursing School, based on RosarioTheme PHP framework.
 
 Quick Start with Docker Compose
 ---------------------------
