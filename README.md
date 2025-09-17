@@ -1,5 +1,68 @@
-RosarioSIS Student Information System
-=====================================
+Choma Nursing School Portal
+===========================
+
+This is a customized student information system for Choma Nursing School, based on RosarioSIS.
+
+Quick Start with Docker Compose
+---------------------------
+
+### Prerequisites
+
+- [Docker](https://docs.docker.com/get-docker/)
+- [Docker Compose](https://docs.docker.com/compose/install/)
+
+### Installation Steps
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/leonmwila/choma-nursing-school-portal.git
+   cd choma-nursing-school-portal
+   ```
+
+2. Start the application using Docker Compose:
+   ```bash
+   docker compose up -d
+   ```
+
+3. Wait for the containers to start (this might take a few minutes on first run)
+
+4. Access the application:
+   - Open your browser and navigate to: http://localhost:8080
+   - Default admin credentials:
+     - Username: admin
+     - Password: admin
+
+### Important Notes
+
+- The application runs on port 8080 by default. Make sure this port is available on your system
+- PostgreSQL database runs on port 5432
+- All data is persisted in a Docker volume named `postgres_data`
+
+### Stopping the Application
+
+To stop the application:
+```bash
+docker compose down
+```
+
+To stop the application and remove all data (including the database):
+```bash
+docker compose down -v
+```
+
+### Troubleshooting
+
+- To view logs:
+  ```bash
+  docker compose logs -f
+  ```
+- To restart the application:
+  ```bash
+  docker compose restart
+  ```
+
+Original RosarioSIS Information
+---------------------------
 
 [<img src="http://www.rosariosis.org/wp-content/uploads/2013/02/rosariosis_logo2half.png" width="144" />](https://www.rosariosis.org)
 
