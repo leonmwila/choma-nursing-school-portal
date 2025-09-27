@@ -7,6 +7,14 @@
 require_once 'ProgramFunctions/_makeLetterGrade.fnc.php';
 require_once 'modules/Grades/includes/StudentAssignments.fnc.php';
 require_once 'modules/Grades/includes/FinalGrades.inc.php';
+require_once 'modules/Grades/includes/Balance.php';
+
+// Check for outstanding balance for students
+if ( User( 'PROFILE' ) === 'student' && StudentHasOutstandingBalance() )
+{
+    DisplayGradesRestrictedMessage();
+    return;
+}
 
 if ( ! empty( $_REQUEST['period'] ) )
 {
