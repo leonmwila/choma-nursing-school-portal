@@ -1,0 +1,110 @@
+<script>if (!window.$) window.location.href = 'index.php?modfunc=logout&token=' + "180be2f17a28813127b4098367f11a5f";</script>
+				<table class="header"><tr class="st"><td class="header1"><h2><span class="module-icon Grades"></span> Report Cards</h2></td></tr></table><form action="Modules.php?modname=Grades/ReportCards.php&modfunc=save&_ROSARIO_PDF=true" method="POST"><table class="header"><tr class="st"><td class="header2"><a href="Modules.php?modname=Grades/ReportCards.php&search_modfunc=list&expanded_view=true">Expanded View</a> | <a href="Modules.php?modname=Grades/ReportCards.php&search_modfunc=list&address_group=Y">Group by Family</a></td><td class="header2 align-right"><input type="submit" value="Create Report Cards for Selected Students" class="button-primary"></td></tr></table><table class="header"><tr class="st"><td class="header2"><table class="width-100p"><tr><td colspan="2"><b>Include on Report Card</b></td></tr><tr><td colspan="2"><table class="cellpadding-5"><tr class="st"><td colspan="2"><label><input type="checkbox" name="elements[studentpic]" value="Y"> Student Photo</label></td></tr><tr class="st"><td><label><input type="checkbox" name="elements[teacher]" value="Y" checked /> Teacher</label></td><td><label><input type="checkbox" name="elements[comments]" value="Y" checked /> Comments</label></td></tr><tr class="st"><td><label><input type="checkbox" name="elements[percents]" value="Y"> Percents</label></td><td><label><input type="checkbox" name="elements[minmax_grades]" value="Y"> Min. and Max. Grades</label></td></tr><tr class="st"><td><label><input type="checkbox" name="elements[credits]" value="Y"> Credits</label></td><td><label><input type="checkbox" name="elements[average]" value="Y"> Class average</label></td></tr><tr class="st"><td><label><input type="checkbox" name="elements[rank]" value="Y"> Class Rank</label></td><td colspan="2"><label><input type="checkbox" name="elements[group_subjects]" value="Y"> Group courses by subject</label></td></tr><tr class="st"><td><label><input type="checkbox" name="elements[ytd_absences]" value="Y" checked /> Year-to-date Daily Absences</label></td><td><label><input type="checkbox" name="elements[ytd_tardies]" value="Y" /> Other Attendance Year-to-date:</label> <select name="ytd_tardies_code" id="ytd_tardies_code"><option value="1">Absent</option><option value="3">Tardy</option><option value="4">Excused Absence</option></select>
+			<label for="ytd_tardies_code" class="a11y-hidden">Attendance Codes</label></td></tr><tr class="st"><td><label><input type="checkbox" name="elements[mp_absences]" value="Y" checked /> Daily Absences this marking period</label></td><td><label><input type="checkbox" name="elements[mp_tardies]" value="Y" /> Other Attendance this marking period:</label> <select name="mp_tardies_code" id="mp_tardies_code"><option value="1">Absent</option><option value="3">Tardy</option><option value="4">Excused Absence</option></select>
+			<label for="mp_tardies_code" class="a11y-hidden">Attendance Codes</label></td></tr><tr class="st"><td><label><input type="checkbox" name="elements[period_absences]" value="Y" /> Period-by-period absences</label></td></tr><tr class="st"><td><table class="cellspacing-0 cellpadding-5"><tr class="st"><td><label>
+			<input type="checkbox" name="elements[last_row][]"
+				value="total"  >&nbsp;Total</label></td><td><label>
+			<input type="checkbox" name="elements[last_row][]"
+				value="gpa"  >&nbsp;GPA</label></td></tr></table><span class="legend-gray">Last row</span><input type="hidden" name="elements[last_row][]" value=""></td><td><table class="cellspacing-0 cellpadding-5"><tr class="st"><td><label>
+			<input type="checkbox" name="elements[last_row][]"
+				value="average"  >&nbsp;Class average</label></td><td><label>
+			<input type="checkbox" name="elements[last_row][]"
+				value="rank"  >&nbsp;Class Rank</label></td></tr></table><span class="legend-gray">Last row</span><input type="hidden" name="elements[last_row][]" value=""></td></tr></table></td></tr><tr><td><label><input type="checkbox" name="elements[freetext]" autocomplete="off" value="1" onclick='javascript: document.getElementById("divfreetext").style.display="block"; document.getElementById("elements[freetext]").focus();'> Free Text</label><div id="divfreetext" style="display:none">
+<script src="assets/js/tinymce/tinymce.min.js?v=4.9.8"></script>
+<script>
+	tinymceSettings = {
+		selector: '.tinymce',
+		plugins: 'link image pagebreak paste table textcolor colorpicker code fullscreen hr media lists',
+		toolbar: "bold italic underline bullist numlist alignleft aligncenter alignright alignjustify link image forecolor backcolor code fullscreen",
+		menu: {
+			// file: {title: 'File', items: 'newdocument'},
+			edit: {title: 'Edit', items: 'undo redo | cut copy paste pastetext'},
+			insert: {title: 'Insert', items: 'media | hr pagebreak | inserttable cell row column'},
+			// view: {title: 'View', items: 'visualaid'},
+			format: {title: 'Format', items: 'formats | removeformat'}
+		},
+		paste_data_images: true,
+		images_upload_handler: function (blobInfo, success, failure) {
+			success("data:" + blobInfo.blob().type + ";base64," + blobInfo.base64());
+		},
+		pagebreak_separator: '<div style="page-break-after: always;"></div>',
+		language: "",
+		directionality : "ltr",
+		relative_urls: false,
+		// verify_html: false,
+		remove_script_host: false,
+		external_plugins: {
+			// Add your plugins using the action hook below.
+		}
+	};
+</script>
+		<script>
+	tinymce.init(tinymceSettings);
+</script><!-- /TinyMCE -->
+
+		<textarea id="inputfreetext" name="inputfreetext" class="tinymce"  rows=4></textarea><label for="inputfreetext"><span class="legend-gray">Free Text</span></label><table><tr class="st"><td class="valign-top"><select name="substitutions_input_1" id="substitutions_input_1" autocomplete="off"><option value="__FULL_NAME__">Display Name</option><option value="__LAST_NAME__">Last Name</option><option value="__FIRST_NAME__">First Name</option><option value="__MIDDLE_NAME__">Middle Name</option><option value="__GRADE_ID__">Grade Level</option><option value="__SCHOOL_ID__">School</option><option value="__YEAR__">School Year</option><option value="__STUDENT_200000000__">Gender</option><option value="__STUDENT_200000001__">Ethnicity</option><option value="__STUDENT_200000002__">Common Name</option><option value="__STUDENT_200000003__">Social Security</option><option value="__STUDENT_200000004__">Birthdate</option><option value="__STUDENT_200000005__">Language</option><option value="__STUDENT_200000006__">Physician</option><option value="__STUDENT_200000007__">Physician Phone</option><option value="__STUDENT_200000008__">Preferred Hospital</option><option value="__STUDENT_200000009__">Comments</option><option value="__STUDENT_200000010__">Has Doctor's Note</option><option value="__STUDENT_200000011__">Doctor's Note Comments</option></select> <input id="substitutions_code_1" type="text" readonly size="12" value="__FULL_NAME__" autocomplete="off"><label for="substitutions_code_1" class="a11y-hidden">Code</label><input id="substitutions_button_1" type="button" value="Copy"><br><label for="substitutions_input_1"><span class="legend-gray">Substitutions<div class="tooltip"><i>Copy the substitution code and paste it into your text. The code will be dynamically replaced with the corresponding value.</i></div></span></label>
+	<script>
+		var substitutionsUpdateCode = function(event) {
+
+			var select = event.target,
+				codeValue = select.value,
+				code = $('#substitutions_code_' + 1);
+
+			// Update code with corresponding selected input value.
+			code.val( codeValue );
+
+			code.attr( 'size', codeValue.length - 1 );
+		};
+
+		var substitutionsCopyCode = function(event) {
+
+			var code = $('#substitutions_code_' + 1);
+
+			code.focus().select();
+
+			// Copy code into clipboard.
+			document.execCommand("copy");
+		};
+
+		// Set select onchange & button onclick functions.
+		$('#substitutions_input_' + 1).change(substitutionsUpdateCode);
+		$('#substitutions_button_' + 1).click(substitutionsCopyCode);
+	</script>
+
+	</td></tr></table></div></td></tr><tr class="st"><td colspan="2"><hr><table class="cellpadding-5"><tr class="st"><td><label>
+					<input type="checkbox" name="mp_arr[]" value="4" /> Quarter 1</label></td><td><label>
+					<input type="checkbox" name="mp_arr[]" value="5" /> Quarter 2</label></td><td><label>
+					<input type="checkbox" name="mp_arr[]" value="2" /> Semester 1</label></td></tr><tr class="st"><td><label>
+					<input type="checkbox" name="mp_arr[]" value="6" /> Quarter 3</label></td><td><label>
+					<input type="checkbox" name="mp_arr[]" value="7" /> Quarter 4</label></td><td><label>
+					<input type="checkbox" name="mp_arr[]" value="3" /> Semester 2</label></td></tr><tr></tr></table><span class="legend-gray">Marking Periods</span><hr></td></tr><tr><td><table><tr class="st"><td><label for="mailing_labels">Mailing Labels</label></td><td><input type="checkbox" id="mailing_labels" name="mailing_labels" value="Y"></td></table></td></tr></table></td></tr></table>	<script>
+		$('#BottomButtonBack span').text("Student List");
+		$('#BottomButtonBack').removeClass('hide')
+			.attr('href', "Modules.php?modname=Grades\/ReportCards.php&search_modfunc=list&bottom_back=true")
+			.attr('title', "Student List");
+	</script>
+	<div class="list-outer students"><table class="list-nav"><tr class="st"><td><span class="size-1">4 students were found.</span> <a href="Modules.php?modname=Grades/ReportCards.php&search_modfunc=list&LO_page=&LO_sort=&LO_dir=&LO_search=&LO_save=1&_ROSARIO_PDF=true" class="list-save" target="_blank"><img src="assets/themes/FlatSIS/btn/download.png" class="alignImg" title="Export list" alt="Export list"></a></td></tr></table><div class="list-wrapper"><table class="list widefat rt has-input" data-list-id="0"><thead><tr><th class="list-column-checkbox"><input type="checkbox" value="Y" name="controller1" id="controller1"
+			onclick="checkAll(this.form,this.checked,&quot;st_arr[]&quot;);" checked>
+			<label for="controller1" class="a11y-hidden">Check All</label>		<script>
+			$('#controller1').closest('form').on('submit', function(e) {
+				if ( ! $('input[name="st_arr[]"]:checked').length ) {
+					e.preventDefault();
+					e.stopImmediatePropagation();
+					$('#controller1')[0].scrollIntoView({behavior: "smooth"});
+					alert("You must choose at least one element from the list.");
+					return false;
+				}
+			});
+		</script>
+		</th><th class="list-column-full-name"><a href="Modules.php?modname=Grades/ReportCards.php&search_modfunc=list&LO_page=1&LO_sort=FULL_NAME&LO_dir=1&LO_search=">Student</a></th><th class="list-column-student-id"><a href="Modules.php?modname=Grades/ReportCards.php&search_modfunc=list&LO_page=1&LO_sort=STUDENT_ID&LO_dir=1&LO_search=">Choma Nursing School ID</a></th><th class="list-column-grade-id"><a href="Modules.php?modname=Grades/ReportCards.php&search_modfunc=list&LO_page=1&LO_sort=GRADE_ID&LO_dir=1&LO_search=">Grade Level</a></th></tr></thead><tbody><tr><td><label><input type="checkbox" name="st_arr[]" value="3" checked><span class="a11y-hidden">Select</span></label></td><td>Bruce Zulu</td><td>3</td><td><!-- 1 -->First Year</td></tr><tr><td><label><input type="checkbox" name="st_arr[]" value="4" checked><span class="a11y-hidden">Select</span></label></td><td>Lukundo Namulwanda</td><td>4</td><td><!-- 1 -->First Year</td></tr><tr><td><label><input type="checkbox" name="st_arr[]" value="20251001" checked><span class="a11y-hidden">Select</span></label></td><td>Niza Kunsanama</td><td>20251001</td><td><!-- 1 -->First Year</td></tr><tr><td><label><input type="checkbox" name="st_arr[]" value="1" checked><span class="a11y-hidden">Select</span></label></td><td>Student S Student</td><td>1</td><td><!-- 1 -->First Year</td></tr></tbody></table></div></div><br /><div class="center"><input type="submit" value="Create Report Cards for Selected Students" class="button-primary"></div></form><br>
+<script>
+	var modname = "Grades\/ReportCards.php";
+	if (typeof menuStudentID !== 'undefined'
+		&& (menuStudentID != ""
+			|| menuStaffID != ""
+			|| menuSchool != "1"
+			|| menuMP != "6"
+			|| menuCoursePeriod != "")) {
+		ajaxLink( 'Side.php?sidefunc=update' );
+	}
+</script>

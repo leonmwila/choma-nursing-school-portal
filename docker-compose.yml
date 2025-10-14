@@ -1,5 +1,3 @@
-version: '3.8'
-
 services:
   app:
     build:
@@ -18,6 +16,14 @@ services:
       - DatabaseName=rosariosis
       - DatabaseUsername=rosariosis
       - DatabasePassword=rosariosis_password
+      - APACHE_TIMEOUT=300
+      - PHP_MAX_EXECUTION_TIME=300
+      - PHP_MEMORY_LIMIT=512M
+      - FONTCONFIG_CACHE_DIR=/tmp/fontconfig-cache
+      - HOME=/tmp
+      - DISPLAY=:99
+    networks:
+      - app-network
 
   db:
     image: postgres:13
@@ -30,6 +36,12 @@ services:
     volumes:
       - postgres_data:/var/lib/postgresql/data
       - ./rosariosis.sql:/docker-entrypoint-initdb.d/rosariosis.sql
+    networks:
+      - app-network
 
 volumes:
   postgres_data:
+
+networks:
+  app-network:
+    driver: bridge

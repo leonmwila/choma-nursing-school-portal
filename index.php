@@ -114,6 +114,9 @@ elseif ( isset( $_POST['USERNAME'] )
 
 	unset( $_REQUEST['USERNAME'], $_POST['USERNAME'] );
 
+	// Initialize variables to prevent undefined warnings
+	$student_RET = false;
+
 	// Lookup for user $username in DB.
 	$login_RET = DBGet( "SELECT USERNAME,PROFILE,STAFF_ID,LAST_LOGIN,FAILED_LOGIN,PASSWORD
 	FROM staff

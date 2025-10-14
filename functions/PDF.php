@@ -122,12 +122,23 @@ function PDFStop( $handle )
 
 	$_html = [];
 
+	// Fix base URL for Docker environment - use localhost instead of external URL
+	$base_url = RosarioURL();
+	// In Docker, replace external port with internal port for wkhtmltopdf
+	if (strpos($base_url, ':8080') !== false) {
+		$base_url = str_replace(':8080', '', $base_url);
+	}
+	// Ensure we use localhost for internal Docker communication
+	if (strpos($base_url, $_SERVER['SERVER_NAME']) !== false && $_SERVER['SERVER_NAME'] !== 'localhost') {
+		$base_url = str_replace($_SERVER['SERVER_NAME'], 'localhost', $base_url);
+	}
+
 	// Convert to HTML page with CSS.
 	$_html['head'] = '<!doctype html>
 		<html lang="' . $lang_2_chars . '" ' . $dir_RTL . '>
 		<head>
 			<meta charset="UTF-8">
-			<base href="' . RosarioURL() . '" />';
+			<base href="' . $base_url . '" />';
 
 	if ( $handle['css'] )
 	{
@@ -203,6 +214,12 @@ function PDFStop( $handle )
 	// Set wkhtmltopdf options.
 	$pdf_options = [
 		'title' => $page_title,
+		'enable-local-file-access' => null,
+		'load-error-handling' => 'ignore',
+		'load-media-error-handling' => 'ignore',
+		'javascript-delay' => 10000,
+		'no-stop-slow-scripts' => null,
+		'enable-javascript' => null,
 	];
 
 	if ( Preferences( 'PAGE_SIZE' ) != 'A4' )
@@ -269,6 +286,12 @@ function PDFStop( $handle )
 	}
 
 	$pdf = new mikehaertl\wkhtmlto\Pdf( $pdf_options );
+
+	// Ensure temp directories exist and are writable for Docker environment
+	@mkdir('/tmp/fontconfig-cache', 0755, true);
+	@mkdir('/tmp/wkhtmltopdf-cache', 0755, true);
+	@chmod('/tmp/fontconfig-cache', 0755);
+	@chmod('/tmp/wkhtmltopdf-cache', 0755);
 
 	if ( ! function_exists( 'proc_open' ) )
 	{
