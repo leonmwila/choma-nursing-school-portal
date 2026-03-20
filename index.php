@@ -487,7 +487,8 @@ if ( empty( $_SESSION['STAFF_ID'] )
 
 ?>
 
-	<img src="assets/themes/<?php echo URLEscape( Config( 'THEME' ) ); ?>/logo.png" class="logo center" alt="Logo" />
+	<?php $school_logo_path = SchoolLogoPath( 0, Config( 'THEME' ) ); ?>
+	<img src="<?php echo URLEscape( $school_logo_path . '?v=' . (int) @filemtime( $school_logo_path ) ); ?>" class="logo center" alt="Logo" />
 	<h4 class="center"><?php echo ParseMLField( Config( 'TITLE' ) ); ?></h4>
 	<form name="loginform" id="loginform" method="post">
 	<table class="cellspacing-0 width-100p">

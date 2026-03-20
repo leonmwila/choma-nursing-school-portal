@@ -377,8 +377,9 @@ if ( ! isset( $_REQUEST['sidefunc'] )
 
 	<?php // User Information. ?>
 
+	<?php $school_logo_path = SchoolLogoPath( UserSchool(), Preferences( 'THEME' ) ); ?>
 	<a href="Modules.php?modname=misc/Portal.php" class="center">
-		<img src="assets/themes/<?php echo Preferences( 'THEME' ); ?>/logo.png" class="logo" alt="Logo">
+		<img src="<?php echo URLEscape( $school_logo_path . '?v=' . (int) @filemtime( $school_logo_path ) ); ?>" class="logo" alt="Logo">
 	</a>
 	<form action="Side.php?sidefunc=update" method="POST" target="menu-top">
 		<span class="username br-after"><?php echo User( 'NAME' ); ?></span>
